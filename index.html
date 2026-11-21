@@ -3,27 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>LA RULETA DE LA BUENA SALUD · HGW</title>
+<title>La Ruleta de la Buena Salud · HGW</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Orbitron:wght@600;700;800&family=Fredoka:wght@500;600;700&display=swap');
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;max-width:100%;overflow-x:hidden}
-:root{
-  --bg:#04100a;--mid:#0b2615;--pa:#103820;--pb:#184c2b;
-  --cy:#39e28f;--gold:#f5c542;--hi:#eafef3;--lo:#a1c8b3;
-  --sa:#ff2e93;--sb:#ffd23f;
-}
-*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{
-  min-height:100vh;min-height:100dvh;color:var(--hi);fon…
-[15:46, 11/21/2026] Synkaisoft Tablet: <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
-<title>LA RULETA DE LA BUENA SALUD · HGW</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Orbitron:wght@600;700;800&family=Fredoka:wght@500;600;700&display=swap');
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;max-width:100%;overflow-x:hidden}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Orbitron:wght@600;700;800&display=swap');
 :root{
   --bg:#04100a;--mid:#0b2615;--pa:#103820;--pb:#184c2b;
   --cy:#39e28f;--gold:#f5c542;--hi:#eafef3;--lo:#a1c8b3;
@@ -49,23 +31,26 @@ body{
 @keyframes spin{to{transform:rotate(360deg)}}
 
 /* marca */
-.brand{position:relative;z-index:10;margin:0 auto;
-  width:clamp(88px,27vw,124px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;overflow:hidden;flex:none;
+.brand{position:absolute;top:clamp(12px,3vw,22px);left:clamp(12px,3vw,22px);z-index:10;
+  width:clamp(44px,10vw,66px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;overflow:hidden;
   background:#0f351e;border:2px solid rgba(57,226,143,.6);box-shadow:0 0 18px rgba(57,226,143,.4)}
-.brand img{width:100%;height:100%;object-fit:contain;padding:3px;display:block}
-@media(min-width:1000px){.brand{position:absolute;top:22px;left:22px;margin:0;width:clamp(110px,9vw,140px)}}
+.brand img{width:100%;height:100%;object-fit:contain;padding:2px;display:none}
+.brand b{font:800 clamp(.6rem,2.4vw,.8rem)/1 'Orbitron',sans-serif;color:var(--cy);letter-spacing:1px}
 
 /* encabezado */
 header{position:relative;z-index:2;text-align:center;margin-top:clamp(10px,2vw,18px);max-width:640px}
-.tagline{margin-top:12px;font:700 clamp(1.1rem,5.4vw,1.85rem)/1.15 'Fredoka','Montserrat',sans-serif;text-transform:uppercase;letter-spacing:clamp(1px,.5vw,3px);
-  color:var(--hi);text-wrap:balance;padding:0 6px;text-shadow:0 0 18px rgba(57,226,143,.55),0 2px 6px rgba(0,0,0,.45)}
+.wordmark{font:800 clamp(1.5rem,6.4vw,2.4rem)/1 'Orbitron',sans-serif;letter-spacing:clamp(3px,1.4vw,8px);
+  background:linear-gradient(180deg,#f2fdf7,#b4f2d3 35%,#59c48b 70%,#246b45);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 16px rgba(57,226,143,.4))}
+.tagline{margin-top:8px;font-size:clamp(.7rem,2.4vw,.85rem);font-weight:600;letter-spacing:2px;color:var(--lo)}
 .badge{margin-top:12px;display:inline-flex;align-items:center;gap:8px;font:600 clamp(.56rem,1.9vw,.64rem) 'Orbitron',sans-serif;
   letter-spacing:2px;color:var(--cy);padding:5px 14px;border:1px solid rgba(57,226,143,.35);border-radius:20px;background:rgba(57,226,143,.06)}
 .badge i{width:7px;height:7px;border-radius:50%;background:var(--cy);box-shadow:0 0 8px var(--cy);animation:bl 1.6s infinite}
 @keyframes bl{50%{opacity:.25}}
 
 /* escenario */
-.stage{position:relative;z-index:2;width:clamp(260px,min(calc(100vw - 28px),88vh),600px);aspect-ratio:1;margin:clamp(22px,5vw,36px) auto 8px;display:grid;place-items:center}
+.stage{position:relative;z-index:2;width:clamp(260px,92vmin,600px);aspect-ratio:1;margin:clamp(22px,5vw,36px) auto 8px;display:grid;place-items:center}
 .frame{position:absolute;inset:0;border-radius:50%;
   background:conic-gradient(from 0deg,#c9ecdc,#3a6650 15deg,#c9ecdc 30deg,#3a6650 45deg,#c9ecdc 60deg,#3a6650 75deg,#c9ecdc 90deg,#3a6650 105deg,#c9ecdc 120deg,#3a6650 135deg,#c9ecdc 150deg,#3a6650 165deg,#c9ecdc 180deg,#3a6650 195deg,#c9ecdc 210deg,#3a6650 225deg,#c9ecdc 240deg,#3a6650 255deg,#c9ecdc 270deg,#3a6650 285deg,#c9ecdc 300deg,#3a6650 315deg,#c9ecdc 330deg,#3a6650 345deg,#c9ecdc);
   opacity:.18;transition:opacity .6s,box-shadow .6s}
@@ -154,24 +139,16 @@ header{position:relative;z-index:2;text-align:center;margin-top:clamp(10px,2vw,1
 .fl a:hover{border-color:var(--cy)}
 footer{position:relative;z-index:2;margin-top:clamp(26px,6vw,42px);text-align:center;font-size:clamp(.6rem,2vw,.7rem);color:var(--lo);opacity:.75;max-width:520px}
 @media(max-height:640px) and (orientation:landscape){.stage{width:clamp(220px,60vh,420px);margin:14px auto 4px}}
-@media(max-width:380px){
-  .chip{width:clamp(52px,14.8vmin,64px)}
-  .card{gap:3px;padding:5px 3px;border-radius:11px}
-  .card span{font-size:.5rem}
-  #status{font-size:.5rem}
-}
-@media(min-width:768px) and (max-width:1024px){.stage{width:clamp(380px,min(78vw,80vh),560px)}}
-@media(min-width:1400px){.stage{width:640px}.chip{width:112px}}
-@media(max-height:640px) and (orientation:landscape){.stage{width:clamp(220px,60vh,420px)}.brand{width:64px}.tagline{font-size:1.05rem;margin-top:6px}}
 @media(prefers-reduced-motion:reduce){.aurora,.ring .s,.star,.badge i{animation:none!important}}
 </style>
 </head>
 <body>
-<div class="brand"><img id="logo" src="https://static.wixstatic.com/media/d00cad_a9729520a00648a590643871b69faa61~mv2.png" alt="Logo"/></div>
+<div class="brand"><img id="logo" alt="Logo HGW"><b id="mono">HGW</b></div>
 <div class="aurora"></div><div id="stars"></div><canvas id="fx"></canvas>
 
 <header>
-  <p class="tagline">LA RULETA DE LA BUENA SALUD</p>
+  <div class="wordmark">HGW</div>
+  <p class="tagline">La ruleta de la buena salud</p>
   <div class="badge"><i></i>Acceso exclusivo</div>
 </header>
 
@@ -200,6 +177,9 @@ footer{position:relative;z-index:2;margin-top:clamp(26px,6vw,42px);text-align:ce
 
 <script>
 /* ===== CONFIGURACIÓN ===== */
+// Pega aquí tu logo (data:image/png;base64,... o una URL). Si queda vacío se muestra el monograma HGW.
+const LOGO_SRC = '';
+
 const ICONS = {
   hub_node:'<path d="M12 2 19 6.5V17.5L12 22 5 17.5V6.5Z"/><circle cx="12" cy="12" r="2.2"/>',
   bubble:'<path d="M4 5h16v11H8l-4 4V5Z"/>',
@@ -234,7 +214,16 @@ const TIPS = [
 const $ = id => document.getElementById(id);
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const N = SEGMENTS.length, SEG = 360 / N;
-const svg = k => <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[k]}</svg>;
+const svg = k => `<svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${ICONS[k]}</svg>`;
+
+/* logo con respaldo */
+(function(){
+  const img = $('logo'), mono = $('mono');
+  if(!LOGO_SRC) return;
+  img.onload = () => { img.style.display = 'block'; mono.style.display = 'none'; };
+  img.onerror = () => { img.style.display = 'none'; mono.style.display = ''; };
+  img.src = LOGO_SRC;
+})();
 
 /* estrellas */
 (function(){
@@ -242,7 +231,7 @@ const svg = k => <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-
   for(let i=0;i<70;i++){
     const s = document.createElement('div'), z = Math.random()*2+.6;
     s.className = 'star';
-    s.style.cssText = width:${z}px;height:${z}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*3}s;
+    s.style.cssText = `width:${z}px;height:${z}px;top:${Math.random()*100}%;left:${Math.random()*100}%;animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*3}s`;
     fr.appendChild(s);
   }
   f.appendChild(fr);
@@ -253,7 +242,7 @@ const svg = k => <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-
   const fm = $('frame');
   for(let i=0;i<16;i++){
     const a = i/16*2*Math.PI, r = document.createElement('div');
-    r.style.cssText = position:absolute;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#dcefdb,#5a9272 60%,#265038);top:${50-48*Math.cos(a)}%;left:${50+48*Math.sin(a)}%;transform:translate(-50%,-50%);
+    r.style.cssText = `position:absolute;width:6px;height:6px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#dcefdb,#5a9272 60%,#265038);top:${50-48*Math.cos(a)}%;left:${50+48*Math.sin(a)}%;transform:translate(-50%,-50%)`;
     fm.appendChild(r);
   }
 })();
@@ -264,17 +253,17 @@ const rotor = $('rotor'), chips = [];
   const stops = [];
   SEGMENTS.forEach((s,i)=>{
     const a = i*SEG, b = a+SEG;
-    if(s.sur){ const m = a+SEG/2; stops.push(var(--sa) ${a}deg,var(--sa) ${m}deg,var(--sb) ${m}deg,var(--sb) ${b}deg); }
-    else { const c = i%2 ? 'var(--pb)' : 'var(--pa)'; stops.push(${c} ${a}deg,${c} ${b}deg); }
+    if(s.sur){ const m = a+SEG/2; stops.push(`var(--sa) ${a}deg`,`var(--sa) ${m}deg`,`var(--sb) ${m}deg`,`var(--sb) ${b}deg`); }
+    else { const c = i%2 ? 'var(--pb)' : 'var(--pa)'; stops.push(`${c} ${a}deg`,`${c} ${b}deg`); }
   });
-  rotor.style.background = repeating-conic-gradient(from 0deg,rgba(140,240,190,.45) 0deg .6deg,transparent .6deg ${SEG}deg),conic-gradient(from 0deg,${stops.join(',')});
+  rotor.style.background = `repeating-conic-gradient(from 0deg,rgba(140,240,190,.45) 0deg .6deg,transparent .6deg ${SEG}deg),conic-gradient(from 0deg,${stops.join(',')})`;
   SEGMENTS.forEach((s,i)=>{
     const a = document.createElement('a');
     a.className = 'chip' + (s.feat?' feat':'') + (s.sur?' sur':'');
     a.style.setProperty('--ac', s.accent);
     if(s.href){ a.href = s.href; a.target = '_blank'; a.rel = 'noopener'; }
     else { a.href = '#'; a.setAttribute('aria-label','Sorpresa'); a.addEventListener('click', e => e.preventDefault()); }
-    a.innerHTML = <div class="card">${svg(s.icon)}<span>${s.label}</span></div>;
+    a.innerHTML = `<div class="card">${svg(s.icon)}<span>${s.label}</span></div>`;
     rotor.appendChild(a); chips.push(a);
   });
 })();
@@ -283,7 +272,7 @@ function layout(){
   chips.forEach((el,i)=>{
     el.style.marginLeft = -el.offsetWidth/2 + 'px';
     el.style.marginTop = -el.offsetHeight/2 + 'px';
-    el.style.transform = rotate(${(i+.5)*SEG}deg) translate(0,-${r}px);
+    el.style.transform = `rotate(${(i+.5)*SEG}deg) translate(0,-${r}px)`;
   });
 }
 layout();
@@ -296,7 +285,7 @@ document.fonts && document.fonts.ready.then(layout);
   SEGMENTS.filter(s=>s.href).forEach(s=>{
     const a = document.createElement('a');
     a.href = s.href; a.target = '_blank'; a.rel = 'noopener';
-    a.innerHTML = ${s.label}<span style="color:var(--cy)">→</span>;
+    a.innerHTML = `${s.label}<span style="color:var(--cy)">→</span>`;
     fl.appendChild(a);
   });
   $('lt').onclick = () => fl.classList.toggle('show');
@@ -325,9 +314,9 @@ function confetti(colors, big){
   if(reduce) return;
   const n = big ? 170 : 110, ox = innerWidth/2, oy = innerHeight*.4;
   for(let i=0;i<n;i++){
-    const a = Math.random()Math.PI*2, v = Math.random()(big?13:10)+4;
+    const a = Math.random()*Math.PI*2, v = Math.random()*(big?13:10)+4;
     parts.push({x:ox,y:oy,vx:Math.cos(a)*v,vy:Math.sin(a)*v-5,w:Math.random()*8+4,h:Math.random()*5+3,
-      r:Math.random()6,vr:(Math.random()-.5).4,c:colors[i%colors.length],life:1});
+      r:Math.random()*6,vr:(Math.random()-.5)*.4,c:colors[i%colors.length],life:1});
   }
   if(!fxOn){ fxOn = true; requestAnimationFrame(drawFx); }
 }
@@ -366,7 +355,7 @@ function frame(ts){
     if(s !== lastSeg){ lastSeg = s; flick(); tick(540 + t*260); if(t < .9) buzz(6); }
     if(t >= 1){ mode = 'idle'; landed(); }
   }
-  rotor.style.transform = rotate(${rotation}deg);
+  rotor.style.transform = `rotate(${rotation}deg)`;
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
